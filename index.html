@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+      <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+        <li><a href="#hobbies" onclick="showSection('hobbies')">Hobbies</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <section id="home" class="active">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Discover my journey in technology, creativity, and learning. Here, I share my skills, projects, and experiences that reflect my passion for growth and innovation.</p>
+    <button class="next" onclick="nextSection('about')">Next</button>
+  </section>
+
+  <section id="about">
+    <div class="about-container">
+      <div class="about-img">
+        <img src="Profile.jpg" alt="Namrata Patel">
+      </div>
+      <div class="about-text">
+        <p>
+          I am <strong>Namrata Patel</strong> and I live in Surat, Gujarat, India. I am currently pursuing my studies in Information Technology as a 3rd year student. 
+          My academic journey has taught me not only knowledge from books but also discipline, time management, and the importance of consistent effort.
+        </p>
+        <p>
+          Outside academics, I spend quality time with my family and friends, who have always been my strongest source of encouragement and motivation. 
+          They inspire me to stay grounded and give my best in every situation. 
+          I believe in moving forward with positivity and treating every obstacle as an opportunity to grow stronger. 
+          For me, life is about continuous learning, self-improvement, and building values that help me succeed not only in my career but also in becoming a responsible and kind individual.
+        </p>
+        <button class="next" onclick="nextSection('skills')">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-box">HTML & CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Problem Solving</div>
+      <div class="skill-box">Teamwork</div>
+	  
+    </div>
+    <button class="next" onclick="nextSection('hobbies')">Next</button>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies & Achievements</h2>
+    
+    <!-- Hobbies -->
+    <h3>Hobbies</h3>
+    <div class="hobbies-container">
+      <div class="hobby-box">Reading</div>
+      <div class="hobby-box">Listening to Music</div>
+      <div class="hobby-box">Exploring World</div>
+      <div class="hobby-box">Photography</div>
+      <div class="hobby-box">Coding</div>
+      <div class="hobby-box">Badminton</div>
+      <div class="hobby-box">Reading Spiritual Books / Scriptures</div>
+    </div>
+
+    <!-- Achievements -->
+    <h3>Achievements</h3>
+    <div class="hobbies-container">
+      <div class="hobby-box">Hackathon Participation</div>
+      <div class="hobby-box">Winner – Coding Competition</div>
+      <div class="hobby-box">Certificate in Web Development</div>
+      <div class="hobby-box">Top Performer – College Project Fair</div>
+      <div class="hobby-box">Completed 30 Days of JavaScript Challenge</div>
+    </div>
+
+    <button class="next" onclick="nextSection('contact')">Next</button>
+  </section>
+
+
+  <section id="contact">
+    <p>If you would like to get in touch with me, please fill out the form below.  
+      Whether you have questions, project ideas, or opportunities to share,  
+      I’ll make sure to respond to you as soon as possible.
+    </p>
+    <h2> Contact Me </h2>
+    <p> Email: namratapatel828@gmail.com | Phone: +91 9925603105 </p>
+    <form>
+      <table>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" id="name" name="name" placeholder="Enter your name" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" placeholder="Enter your email" required></td>
+        </tr>
+        <tr>
+          <td><label for="phone">Phone:</label></td>
+          <td><input type="tel" id="phone" name="phone" placeholder="Enter your phone number"></td>
+        </tr>
+        <tr>
+          <td><label for="message">Message:</label></td>
+          <td><textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center;">
+            <button type="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Namrata Patel | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+    function nextSection(nextId) { showSection(nextId); }
+  </script>
+</body>
+</html>
